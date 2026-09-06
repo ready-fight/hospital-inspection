@@ -38,7 +38,7 @@ export default function AdminLogin(){
           <label>ユーザーID<input defaultValue="admin"/></label>
           <label>パスワード<input type="password" defaultValue="password123"/></label>
 
-          <button className="primary login-main-btn" onClick={()=>r.push('/admin')}>
+          <button className="primary login-main-btn" onClick={()=>{localStorage.setItem('demo-admin-auth','1');r.push('/admin')}}>
             <span>管理者ログイン</span><i>→</i>
           </button>
 

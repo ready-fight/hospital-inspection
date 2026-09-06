@@ -39,7 +39,7 @@ export default function Login(){
           <label>パスワード<input type="password" defaultValue="password123"/></label>
           <label className="remember"><input type="checkbox" defaultChecked/>ユーザーID・パスワードを保持</label>
 
-          <button onClick={()=>r.push('/dashboard')} className="primary login-main-btn">
+          <button onClick={()=>{localStorage.setItem('demo-auth','1');r.push('/dashboard')}} className="primary login-main-btn">
             <span>ログイン</span><i>→</i>
           </button>
 

@@ -1,7 +1,19 @@
 'use client'
 import Link from 'next/link'
+import {useRouter} from 'next/navigation'
 
 export default function AppHeader({admin=false}:{admin?:boolean}){
+  const router = useRouter()
+
+  function logout(){
+    try{
+      localStorage.removeItem('demo-auth')
+      localStorage.removeItem('demo-admin-auth')
+      sessionStorage.clear()
+    }catch{}
+    router.push(admin ? '/admin/login' : '/login')
+  }
+
   return (
     <header className={`app-header ${admin ? 'is-admin' : ''}`}>
       <div className="brand-lockup">
@@ -19,6 +31,7 @@ export default function AppHeader({admin=false}:{admin?:boolean}){
       <nav>
         <Link href={admin?'/admin':'/dashboard'}>ダッシュボード</Link>
         {!admin&&<Link href="/reports">報告書一覧</Link>}
+        <button className="header-logout" type="button" onClick={logout}>ログアウト</button>
         <span className="header-demo-state"><i/>DEMO</span>
       </nav>
     </header>

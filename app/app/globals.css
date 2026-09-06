@@ -880,3 +880,29 @@ body{
   .pdf-preview-modal{width:100%;height:94vh}
   .generated-pdf-frame,.generated-pdf-frame iframe,.pdf-loading{min-height:500px}
 }
+
+
+/* Logout */
+.header-logout{
+  appearance:none;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.045);
+  color:#dce6f1;
+  padding:9px 12px;
+  border-radius:8px;
+  font:inherit;
+  font-size:13px;
+  cursor:pointer;
+  transition:background .16s ease,color .16s ease,border-color .16s ease;
+}
+.header-logout:hover{
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  border-color:rgba(255,255,255,.26);
+}
+@media(max-width:560px){
+  .header-logout{
+    padding:8px 10px;
+    font-size:12px;
+  }
+}
