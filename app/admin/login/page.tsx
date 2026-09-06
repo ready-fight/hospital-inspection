@@ -1,0 +1,3 @@
+'use client'
+import {useRouter} from 'next/navigation'
+export default function AdminLogin(){const r=useRouter();return <main className="login-page admin-login"><section className="login-card"><div className="login-logo">A</div><p className="eyebrow">ADMINISTRATION</p><h1>管理者サイト</h1><p className="login-sub">作業完了報告書SYSTEM</p><label>ユーザーID<input defaultValue="admin"/></label><label>パスワード<input type="password" defaultValue="password123"/></label><button className="primary" onClick={()=>r.push('/admin')}>管理者ログイン</button><div className="login-links"><a href="/login">ユーザーサイトへ戻る</a></div></section></main>}

@@ -1,0 +1,3 @@
+'use client'
+import {useRouter} from 'next/navigation'
+export default function Login(){const r=useRouter();return <main className="login-page"><section className="login-card"><div className="login-logo">✓</div><p className="eyebrow">WORK COMPLETION REPORT</p><h1>作業完了報告書SYSTEM</h1><p className="login-sub">協力会社 ユーザーログイン</p><label>ユーザーID<input defaultValue="TOKYO001"/></label><label>パスワード<input type="password" defaultValue="password123"/></label><label className="remember"><input type="checkbox" defaultChecked/>ユーザーID・パスワードを保持</label><button onClick={()=>r.push('/dashboard')} className="primary">ログイン</button><div className="login-links"><a href="/admin/login">管理者サイトはこちら</a><span>※ デモのためそのままログインできます</span></div></section></main>}
